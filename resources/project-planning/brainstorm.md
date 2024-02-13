@@ -31,4 +31,7 @@
     - Header/Navigation
     - Main photo & portfolio purpose statement
     - Footer w/ Contact info
+    - Contact page
+        - Contact info
+        - Inquiry form
 
