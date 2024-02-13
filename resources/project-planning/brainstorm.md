@@ -34,4 +34,8 @@
     - Contact page
         - Contact info
         - Inquiry form
+- Implement home/portfolio page
+- Implement contact page
+- Add interactive elements via JavaScript
+- Make the website responsive to tablet and mobile sizes
 
