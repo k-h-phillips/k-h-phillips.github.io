@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Big_Shoulders_Inline_Text, Big_Shoulders_Text } from "next/font/google";
 import "./globals.css";
 import NavBar from "./components/NavBar/NavBar";
@@ -21,6 +21,13 @@ export const metadata: Metadata = {
   title: "Kirsten Phillips",
   description: "Portfolio website of Kirsten Phillips, full stack web developer"
 };
+ 
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 1,
+  userScalable: false,
+}
 
 /*
   The root layout shows UI that is shared across multiple routes.
