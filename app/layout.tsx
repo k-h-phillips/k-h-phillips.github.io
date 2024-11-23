@@ -44,11 +44,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="h-lvh">
       {/* Include shared UI here e.g. a header or sidebar */}
-      <body
-        className={`${bigShouldersInlineText.variable} ${bigShouldersText.variable} antialiased`}
-      >
+      <body className={`${bigShouldersInlineText.variable} ${bigShouldersText.variable} antialiased`} >
         <NavBar />
         {children}
       </body>
