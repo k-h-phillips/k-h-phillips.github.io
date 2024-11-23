@@ -1,6 +1,6 @@
 .nav {
     background-color: var(--dark-mauve);
-    position: absolute;
+    position: fixed;
     top: 0;
     right: 0;
     transition: all 1.0s;

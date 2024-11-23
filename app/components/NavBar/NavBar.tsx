@@ -11,8 +11,8 @@ function NavBar() {
     const toggleNavigation = () => setNavigation(!navigation);
 
     return (
-        <>
-            <div className="absolute w-full py-10 px-10 flex justify-center sm:justify-end gap-10">
+        <div>
+            <div className="absolute w-full my-10 px-10 flex justify-center sm:justify-end gap-10">
                 <Link href="https://github.com/k-h-phillips" target="_blank" className="nav-icon">
                     <LuIcons.LuGithub color="var(--peach)" className="text-[30px] sm:text-[36px]" />
                 </Link>
@@ -27,7 +27,7 @@ function NavBar() {
                 <Link href="" className="absolute z-10 w-full py-10 px-10 flex justify-end">
                     <Io5Icons.IoClose color="var(--peach)" className="nav-icon text-[36px] sm:text-[42px]" onClick={toggleNavigation} />
                 </Link>
-                <ul className="flex flex-col gap-1 items-center justify-center h-full p-12">
+                <ul className="flex flex-col gap-1 items-center justify-center p-12 h-full">
                     <Link href="/resume" className="p-8 nav-link rounded-md" onClick={toggleNavigation}>
                         <h1 className="font-bold text-6xl sm:text-7xl text-center">résumé</h1>
                     </Link>
@@ -39,7 +39,7 @@ function NavBar() {
                     </Link>
                 </ul>
             </nav>
-        </>
+        </div>
     )
 }
 

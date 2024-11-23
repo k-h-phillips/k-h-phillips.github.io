@@ -10,12 +10,6 @@
   --oyster: #F9F4EA;
 }
 
-*, *:after, *:before {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
 body {
   color: var(--oyster);
   background: var(--dark-mauve);
