@@ -9,11 +9,14 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
-      },
+        dark_mauve: "var(--dark-mauve)",
+        peach: "var(--peach)",
+        light_mauve: "var(--light-mauve)",
+        dusty_blue: "var(--dusty-blue)",
+        oyster: "var(--oyster)"
+      }
     },
-  },
-  plugins: [],
+    plugins: [],
+  }
 };
 export default config;
