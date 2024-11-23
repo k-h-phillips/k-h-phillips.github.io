@@ -23,7 +23,7 @@ function NavBar() {
                     <Io5Icons.IoMenu color="var(--peach)" className="text-[30px] sm:text-[36px]" />
                 </Link>
             </div>
-            <nav className={ navigation ? "nav w-full lg:w-1/4" : "nav w-0" }>
+            <nav className={ navigation ? "nav w-full h-full lg:w-1/4" : "nav w-0 h-full" }>
                 <Link href="" className="absolute z-10 w-full py-10 px-10 flex justify-end">
                     <Io5Icons.IoClose color="var(--peach)" className="nav-icon text-[36px] sm:text-[42px]" onClick={toggleNavigation} />
                 </Link>
