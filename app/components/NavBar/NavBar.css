@@ -1,0 +1,37 @@
+.nav {
+    height: 100%;
+    background-color: var(--dark-mauve);
+    position: absolute;
+    top: 0;
+    right: 0;
+    transition: all 1.0s;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.nav:before {
+    content: "";
+    background-image: url(../../../public/images/flower-wall.jpg);
+    opacity: 0.2;
+    display: block;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+}
+
+.nav ul {
+    z-index: 2;
+    position: relative; 
+}
+
+.nav-icon:hover {
+    transform: scale(1.2);
+}
+
+.nav-icon {
+    transition: all 0.5s;
+}
+
+.nav-link:hover {
+    background-color: rgba(118, 164, 200, 0.4);
+}

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Big_Shoulders_Inline_Text, Big_Shoulders_Text } from "next/font/google";
 import "./globals.css";
-import NavBar from "./components/NavBar";
+import NavBar from "./components/NavBar/NavBar";
 
 const bigShouldersInlineText = Big_Shoulders_Inline_Text({
   variable: "--font-big-shoulders-inline-text",
@@ -19,7 +19,7 @@ const bigShouldersText = Big_Shoulders_Text({
 */
 export const metadata: Metadata = {
   title: "Kirsten Phillips",
-  description: "Portfolio website of Kirsten Phillips, full stack web developer",
+  description: "Portfolio website of Kirsten Phillips, full stack web developer"
 };
 
 /*

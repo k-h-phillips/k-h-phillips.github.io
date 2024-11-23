@@ -10,9 +10,19 @@
   --oyster: #F9F4EA;
 }
 
+*, *:after, *:before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 body {
   color: var(--oyster);
   background: var(--dark-mauve);
+}
+
+h1 {
+  font-family: var(--font-big-shoulders-inline-text)
 }
 
 p {
@@ -23,4 +33,24 @@ p {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+.faded-bg {
+  position: relative;
+}
+
+.faded-bg:after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 80%;
+  height: 140%;
+  left: 10%;
+  top: -20%;
+  border-radius: 0.375rem;
+  z-index: -1
+}
+
+.intro:after {
+  background-color: rgba(129, 85, 90, 0.4);
 }
