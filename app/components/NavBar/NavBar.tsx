@@ -23,21 +23,21 @@ function NavBar() {
                     <Io5Icons.IoMenu color="var(--peach)" className="text-[30px] sm:text-[36px]" />
                 </Link>
             </div>
-            <nav className={ navigation ? "nav w-full h-full lg:w-1/4" : "nav w-0 h-full" }>
+            <nav className={ navigation ? "nav w-full lg:w-1/4" : "nav w-0" }>
                 <Link href="" className="absolute z-10 w-full py-10 px-10 flex justify-end">
                     <Io5Icons.IoClose color="var(--peach)" className="nav-icon text-[36px] sm:text-[42px]" onClick={toggleNavigation} />
                 </Link>
-                <ul className="flex flex-col gap-1 items-center justify-center p-12 h-full">
-                    <Link href="/resume" className="p-8 nav-link rounded-md" onClick={toggleNavigation}>
+                <div className="p-10 flex flex-col h-full justify-evenly overflow-scroll z-[2]">
+                    <Link href="/resume" className="p-4 nav-link rounded-md" onClick={toggleNavigation}>
                         <h1 className="font-bold text-6xl sm:text-7xl text-center">résumé</h1>
                     </Link>
-                    <Link href="/about" className="p-8 nav-link rounded-md" onClick={toggleNavigation}>
+                    <Link href="/about" className="p-4 nav-link rounded-md" onClick={toggleNavigation}>
                         <h1 className="font-bold text-6xl sm:text-7xl text-center">about</h1>
                     </Link>
-                    <Link href="/contact" className="p-8 nav-link rounded-md" onClick={toggleNavigation}>
+                    <Link href="/contact" className="p-4 nav-link rounded-md" onClick={toggleNavigation}>
                         <h1 className="font-bold text-6xl sm:text-7xl text-center">contact</h1>
                     </Link>
-                </ul>
+                </div>
             </nav>
         </div>
     )

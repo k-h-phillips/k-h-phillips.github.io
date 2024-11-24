@@ -1,6 +1,7 @@
 .nav {
     background-color: var(--dark-mauve);
     position: fixed;
+    height: 100%;
     top: 0;
     right: 0;
     transition: all 1.0s;
@@ -13,14 +14,10 @@
     background-image: url(../../../public/images/flower-wall.jpg);
     opacity: 0.2;
     display: block;
+    position: absolute;
+    top: 0;
     height: 100%;
     width: 100%;
-    position: absolute;
-}
-
-.nav ul {
-    z-index: 2;
-    position: relative; 
 }
 
 .nav-icon:hover {
@@ -28,6 +25,11 @@
 }
 
 .nav-icon {
+    transition: all 0.5s;
+}
+
+.nav-link {
+    z-index: 2;
     transition: all 0.5s;
 }
 
