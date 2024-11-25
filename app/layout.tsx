@@ -48,7 +48,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="dark">
       {/* Include shared UI here e.g. a header or sidebar */}
-      <body className={`${bigShouldersInlineText.variable} ${bigShouldersText.variable} min-h-screen antialiased`} >
+      <body className={`${bigShouldersInlineText.variable} ${bigShouldersText.variable} antialiased`} >
         <Providers>
           <NavBar />
           {children}
