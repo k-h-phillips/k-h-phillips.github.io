@@ -22,7 +22,7 @@ function NavBar() {
     const onMenuItemClick = () => setIsMenuOpen(!isMenuOpen)
 
     return (
-        <Navbar onMenuOpenChange={setIsMenuOpen} isMenuOpen={isMenuOpen} className="nav static">
+        <Navbar onMenuOpenChange={setIsMenuOpen} isMenuOpen={isMenuOpen} className="nav static flex-initial">
             <NavbarContent justify="start">
                 <NavbarBrand>
                     <Link href="/" onClick={() => setIsMenuOpen(false)}>

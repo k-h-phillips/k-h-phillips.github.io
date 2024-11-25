@@ -50,8 +50,10 @@ export default function RootLayout({
       {/* Include shared UI here e.g. a header or sidebar */}
       <body className={`${bigShouldersInlineText.variable} ${bigShouldersText.variable} antialiased`} >
         <Providers>
-          <NavBar />
-          {children}
+          <div className="flex flex-col min-h-screen">
+            <NavBar />
+            {children}
+          </div>
         </Providers>
       </body>
     </html>
