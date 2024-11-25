@@ -1,23 +1,26 @@
 .nav {
-    background-color: var(--dark-mauve);
-    position: fixed;
-    height: 100%;
-    top: 0;
-    right: 0;
-    transition: all 1.0s;
-    overflow: hidden;
-    z-index: 1;
+    background-color: var(--dark-mauve) !important;
 }
 
-.nav:before {
+.nav-menu {
+    justify-content: center;
+    align-items: center;
+    gap: 3rem !important;
+}
+
+.nav-menu:after {
     content: "";
     background-image: url(../../../public/images/flower-wall.jpg);
     opacity: 0.2;
-    display: block;
-    position: absolute;
-    top: 0;
     height: 100%;
     width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.menu-toggle {
+    width: 30px !important
 }
 
 .nav-icon:hover {
@@ -29,7 +32,8 @@
 }
 
 .nav-link {
-    z-index: 2;
+    border-radius: 10px;
+    padding: 10px;
     transition: all 0.5s;
 }
 

@@ -2,44 +2,59 @@
 
 import Link from "next/link";
 import { useState } from "react";
-import * as Io5Icons from "react-icons/io5";
+import {Navbar, NavbarBrand, NavbarContent, NavbarItem, 
+    NavbarMenuToggle, NavbarMenu, NavbarMenuItem} from "@nextui-org/react";
 import * as LuIcons from "react-icons/lu";
-import "./NavBar.css"
+import * as Io5Icons from "react-icons/io5";
+import React from "react";
+import "./NavBar.css";
 
 function NavBar() {
-    const [ navigation, setNavigation ] = useState<boolean>(false);
-    const toggleNavigation = () => setNavigation(!navigation);
+    const [ isMenuOpen, setIsMenuOpen ] = useState<boolean>(false);
+    const menuItems = [
+        { menuItem: 'résumé', path: "/resume" },
+        { menuItem: 'about', path: "/about" },
+        { menuItem: 'contact', path: '/contact' },
+    ]
+    const menuIcon = isMenuOpen ? 
+        <Io5Icons.IoClose color="var(--peach)" size={30} className="nav-icon" /> :
+        <Io5Icons.IoMenu color="var(--peach)" size={30} className="nav-icon" />;
+    const onMenuItemClick = () => setIsMenuOpen(!isMenuOpen)
 
     return (
-        <div>
-            <div className="absolute w-full my-10 px-10 flex justify-center sm:justify-end gap-10">
-                <Link href="https://github.com/k-h-phillips" target="_blank" className="nav-icon">
-                    <LuIcons.LuGithub color="var(--peach)" className="text-[30px] sm:text-[36px]" />
-                </Link>
-                <Link href="https://www.linkedin.com/in/kirsten-phillips-06845b15b" target="_blank" className="nav-icon">
-                    <LuIcons.LuLinkedin color="var(--peach)" className="text-[30px] sm:text-[36px]" />
-                </Link>
-                <Link href="" onClick={toggleNavigation} className="nav-icon">
-                    <Io5Icons.IoMenu color="var(--peach)" className="text-[30px] sm:text-[36px]" />
-                </Link>
-            </div>
-            <nav className={ navigation ? "nav w-full lg:w-1/4" : "nav w-0" }>
-                <Link href="" className="absolute z-10 w-full py-10 px-10 flex justify-end">
-                    <Io5Icons.IoClose color="var(--peach)" className="nav-icon text-[36px] sm:text-[42px]" onClick={toggleNavigation} />
-                </Link>
-                <div className="p-10 flex flex-col h-full justify-evenly overflow-scroll z-[2]">
-                    <Link href="/resume" className="p-4 nav-link rounded-md" onClick={toggleNavigation}>
-                        <h1 className="font-bold text-6xl sm:text-7xl text-center">résumé</h1>
+        <Navbar onMenuOpenChange={setIsMenuOpen} isMenuOpen={isMenuOpen} className="nav static">
+            <NavbarContent justify="start">
+                <NavbarBrand>
+                    <Link href="/" onClick={() => setIsMenuOpen(false)}>
+                        <h1 className="font-bold text-3xl text-[var(--oyster)]">kp</h1>
                     </Link>
-                    <Link href="/about" className="p-4 nav-link rounded-md" onClick={toggleNavigation}>
-                        <h1 className="font-bold text-6xl sm:text-7xl text-center">about</h1>
+                </NavbarBrand>
+            </NavbarContent>
+            <NavbarContent className="sm:flex gap-4" justify="end">
+                <NavbarItem>
+                    <Link href="https://github.com/k-h-phillips" target="_blank">
+                        <LuIcons.LuGithub color="var(--peach)" size={30} className="nav-icon" />
                     </Link>
-                    <Link href="/contact" className="p-4 nav-link rounded-md" onClick={toggleNavigation}>
-                        <h1 className="font-bold text-6xl sm:text-7xl text-center">contact</h1>
+                </NavbarItem>
+                <NavbarItem>
+                    <Link href="https://www.linkedin.com/in/kirsten-phillips-06845b15b" target="_blank">
+                        <LuIcons.LuLinkedin color="var(--peach)" size={30} className="nav-icon" />
                     </Link>
-                </div>
-            </nav>
-        </div>
+                </NavbarItem>
+                <NavbarMenuToggle
+                    aria-label={isMenuOpen ? "Close menu" : "Open menu"} 
+                    icon={menuIcon} className="menu-toggle"/>
+            </NavbarContent>
+            <NavbarMenu className="nav-menu">
+                {menuItems.map((item, index) => (
+                    <NavbarMenuItem key={`${item}-${index}`} className="text-6xl z-[40] nav-link"  onClick={onMenuItemClick}>
+                        <Link href={item.path}>
+                            <h1>{item.menuItem}</h1>
+                        </Link>
+                    </NavbarMenuItem>
+                ))}
+            </NavbarMenu>
+        </Navbar>
     )
 }
 

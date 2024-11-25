@@ -2,6 +2,8 @@ import type { Metadata, Viewport } from "next";
 import { Big_Shoulders_Inline_Text, Big_Shoulders_Text } from "next/font/google";
 import "./globals.css";
 import NavBar from "./components/NavBar/NavBar";
+import { Providers } from './providers';
+import React from "react";
 
 const bigShouldersInlineText = Big_Shoulders_Inline_Text({
   variable: "--font-big-shoulders-inline-text",
@@ -44,11 +46,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="dark">
       {/* Include shared UI here e.g. a header or sidebar */}
-      <body className={`${bigShouldersInlineText.variable} ${bigShouldersText.variable} antialiased`} >
-        <NavBar />
-        {children}
+      <body className={`${bigShouldersInlineText.variable} ${bigShouldersText.variable} min-h-screen antialiased`} >
+        <Providers>
+          <NavBar />
+          {children}
+        </Providers>
       </body>
     </html>
   );
