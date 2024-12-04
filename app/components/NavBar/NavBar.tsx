@@ -26,7 +26,7 @@ function NavBar() {
             <NavbarContent justify="start">
                 <NavbarBrand>
                     <Link href="/" onClick={() => setIsMenuOpen(false)}>
-                        <h1 className="font-bold text-3xl text-[var(--oyster)]">kp</h1>
+                        <h1 className="font-bold text-3xl text-[var(--linen)] nav-icon">kp</h1>
                     </Link>
                 </NavbarBrand>
             </NavbarContent>

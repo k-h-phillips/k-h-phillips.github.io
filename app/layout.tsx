@@ -4,6 +4,8 @@ import "./globals.css";
 import NavBar from "./components/NavBar/NavBar";
 import { Providers } from './providers';
 import React from "react";
+import { Suspense } from 'react';
+import Loading from './loading';
 
 const bigShouldersInlineText = Big_Shoulders_Inline_Text({
   variable: "--font-big-shoulders-inline-text",
@@ -52,7 +54,9 @@ export default function RootLayout({
         <Providers>
           <div className="flex flex-col min-h-screen">
             <NavBar />
-            {children}
+            <Suspense fallback={<Loading />} >
+              {children}
+            </Suspense>
           </div>
         </Providers>
       </body>

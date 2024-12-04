@@ -7,7 +7,7 @@ export default function Home() {
       <main className="flex flex-col gap-2 sm:gap-4 items-center">
         <p className="font-bold text-2xl sm:text-4xl text-peach">hi, i&apos;m</p>
         <h1 className="font-bold text-7xl sm:text-9xl text-center">kirsten phillips</h1>
-        <p className="w-11/12 sm:w-3/5 font-bold text-xl sm:text-3xl text-[var(--dusty-blue)] text-center my-6 faded-bg intro">a software engineer working to create simple yet powerful products to make life easier</p>
+        <p className="w-11/12 sm:w-3/5 font-bold text-m sm:text-xl text-[var(--dusty-blue)] text-center my-6 faded-bg intro">a software engineer working to create simple yet powerful products to make life easier</p>
       </main>
     </div>
   );

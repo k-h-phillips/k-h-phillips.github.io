@@ -13,16 +13,36 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        dark_mauve: "var(--dark-mauve)",
+        dark_mauve: "var(--plum)",
         peach: "var(--peach)",
-        light_mauve: "var(--light-mauve)",
+        light_mauve: "var(--mauve)",
         dusty_blue: "var(--dusty-blue)",
-        oyster: "var(--oyster)"
+        oyster: "var(--linen)",
+        sage: "var(--sage)",
       }
     },
-    plugins: [],
   },
   darkMode: "class",
-  plugins: [nextui()]
+  plugins: [
+    nextui({
+      themes: {
+        dark: {
+          colors: {
+            background: "#5B454C",
+            foreground: "#F9F4EA",
+            focus: "#464C49",
+            primary: {
+              foreground: "#5B454C",
+              DEFAULT: "#BF8776",
+            },
+            danger: {
+              foreground: "#5B454C",
+              DEFAULT: "#DC5B6F",
+            },
+          },
+        },
+      },
+    }),
+  ]
 };
 export default config;

@@ -3,23 +3,25 @@
 @tailwind utilities;
 
 :root {
-  --dark-mauve: #5B454C;
+  --linen: #F9F4EA;
+  --plum: #5B454C;
+  --mauve: #81555A;
   --peach: #BF8776;
-  --light-mauve: #81555A;
-  --dusty-blue: #76A4C8;
-  --oyster: #F9F4EA;
+  --dusty-blue: #6EA0BD;
+  --sage: #919982;
+  --gray: #38494f;
 }
 
 body {
-  color: var(--oyster);
-  background: var(--dark-mauve);
+  color: var(--linen);
+  background: var(--plum);
 }
 
 h1 {
   font-family: var(--font-big-shoulders-inline-text)
 }
 
-p {
+p, button {
   font-family: var(--font-big-shoulders-text)
 }
 
@@ -48,5 +50,5 @@ p {
 }
 
 .intro:after {
-  background: var(--light-mauve);
+  background: var(--mauve);
 }
