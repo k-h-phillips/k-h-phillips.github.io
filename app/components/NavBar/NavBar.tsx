@@ -1,28 +1,27 @@
 'use client'
 
+import { Navbar, NavbarBrand, NavbarContent, NavbarItem, NavbarMenu, NavbarMenuItem, NavbarMenuToggle } from "@nextui-org/react";
 import Link from "next/link";
 import { useState } from "react";
-import {Navbar, NavbarBrand, NavbarContent, NavbarItem, 
-    NavbarMenuToggle, NavbarMenu, NavbarMenuItem} from "@nextui-org/react";
-import * as LuIcons from "react-icons/lu";
 import * as Io5Icons from "react-icons/io5";
-import React from "react";
+import * as LuIcons from "react-icons/lu";
 import "./NavBar.css";
 
 function NavBar() {
-    const [ isMenuOpen, setIsMenuOpen ] = useState<boolean>(false);
+    // The menu toggler should be an 'X' when the menu is open and the hamber icon when closed.
+    const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
+    const onMenuItemClick = () => setIsMenuOpen(!isMenuOpen)
+    const menuIcon = isMenuOpen ?
+        <Io5Icons.IoClose color="var(--peach)" size={30} className="nav-icon" /> :
+        <Io5Icons.IoMenu color="var(--peach)" size={30} id="menu-icon" className="nav-icon" />;
+
     const menuItems = [
         { menuItem: 'résumé', path: "/resume" },
         { menuItem: 'about', path: "/about" },
         { menuItem: 'contact', path: '/contact' },
     ]
-    const menuIcon = isMenuOpen ? 
-        <Io5Icons.IoClose color="var(--peach)" size={30} className="nav-icon" /> :
-        <Io5Icons.IoMenu color="var(--peach)" size={30} className="nav-icon" />;
-    const onMenuItemClick = () => setIsMenuOpen(!isMenuOpen)
-
     return (
-        <Navbar onMenuOpenChange={setIsMenuOpen} isMenuOpen={isMenuOpen} className="nav static flex-initial">
+        <Navbar onMenuOpenChange={setIsMenuOpen} isMenuOpen={isMenuOpen} className="nav fixed flex-initial">
             <NavbarContent justify="start">
                 <NavbarBrand>
                     <Link href="/" onClick={() => setIsMenuOpen(false)}>
@@ -42,12 +41,16 @@ function NavBar() {
                     </Link>
                 </NavbarItem>
                 <NavbarMenuToggle
-                    aria-label={isMenuOpen ? "Close menu" : "Open menu"} 
-                    icon={menuIcon} className="menu-toggle"/>
+                    aria-label={isMenuOpen ? "Close menu" : "Open menu"}
+                    icon={menuIcon}
+                    className="menu-toggle" />
             </NavbarContent>
             <NavbarMenu className="nav-menu">
                 {menuItems.map((item, index) => (
-                    <NavbarMenuItem key={`${item}-${index}`} className="text-6xl z-[40] nav-link"  onClick={onMenuItemClick}>
+                    <NavbarMenuItem
+                        key={`${item}-${index}`}
+                        className="text-6xl z-[40] nav-link"
+                        onClick={onMenuItemClick}>
                         <Link href={item.path}>
                             <h1>{item.menuItem}</h1>
                         </Link>

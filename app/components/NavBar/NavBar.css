@@ -1,13 +1,25 @@
-.nav {
-    background-color: var(--plum) !important;
+/* Navigation bar icons. */
+.menu-toggle {
+    width: 30px !important
 }
 
+/* Scale the icons on hover to create emphasis. */
+.nav-icon:hover {
+    transform: scale(1.5);
+}
+
+.nav-icon {
+    transition: all 0.5s;
+}
+
+/* Navigation menu list. */
 .nav-menu {
     justify-content: center;
     align-items: center;
     gap: 3rem !important;
 }
 
+/* Navigation menu list has the floral background. */
 .nav-menu:after {
     content: "";
     background-image: url(../../../public/images/flower-wall.jpg);
@@ -17,20 +29,10 @@
     position: absolute;
     top: 0;
     left: 0;
+    z-index: -1;
 }
 
-.menu-toggle {
-    width: 30px !important
-}
-
-.nav-icon:hover {
-    transform: scale(1.2);
-}
-
-.nav-icon {
-    transition: all 0.5s;
-}
-
+/* Navigation menu items. */
 .nav-link {
     border-radius: 10px;
     padding: 10px;
@@ -38,5 +40,5 @@
 }
 
 .nav-link:hover {
-    background-color: rgba(118, 164, 200, 0.4);
+    background-color: rgba(145, 153, 130, 0.4);
 }

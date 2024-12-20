@@ -1,20 +1,19 @@
 import type { Metadata, Viewport } from "next";
 import { Big_Shoulders_Inline_Text, Big_Shoulders_Text } from "next/font/google";
-import "./globals.css";
-import NavBar from "./components/NavBar/NavBar";
-import { Providers } from './providers';
 import React from "react";
-import { Suspense } from 'react';
-import Loading from './loading';
+import NavBar from "./components/NavBar/NavBar";
+import "./globals.css";
+import { Providers } from './providers';
 
+// Big shoulders font is the theme font.
 const bigShouldersInlineText = Big_Shoulders_Inline_Text({
   variable: "--font-big-shoulders-inline-text",
-  subsets:['latin']
+  subsets: ['latin']
 });
 
 const bigShouldersText = Big_Shoulders_Text({
   variable: "--font-big-shoulders-text",
-  subsets:['latin']
+  subsets: ['latin']
 });
 
 /*
@@ -23,9 +22,9 @@ const bigShouldersText = Big_Shoulders_Text({
 */
 export const metadata: Metadata = {
   title: "Kirsten Phillips",
-  description: "Portfolio website of Kirsten Phillips, full stack web developer"
+  description: "Portfolio website of Kirsten Phillips, a full stack software engineer"
 };
- 
+
 export const viewport: Viewport = {
   width: 'device-width',
   initialScale: 1,
@@ -49,14 +48,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="dark">
-      {/* Include shared UI here e.g. a header or sidebar */}
       <body className={`${bigShouldersInlineText.variable} ${bigShouldersText.variable} antialiased`} >
         <Providers>
-          <div className="flex flex-col min-h-screen">
+          <div className="flex flex-col min-h-screen items-center">
             <NavBar />
-            <Suspense fallback={<Loading />} >
-              {children}
-            </Suspense>
+            {children}
           </div>
         </Providers>
       </body>

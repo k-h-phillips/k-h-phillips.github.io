@@ -10,18 +10,6 @@ const config: Config = {
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
     "./node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}"
   ],
-  theme: {
-    extend: {
-      colors: {
-        dark_mauve: "var(--plum)",
-        peach: "var(--peach)",
-        light_mauve: "var(--mauve)",
-        dusty_blue: "var(--dusty-blue)",
-        oyster: "var(--linen)",
-        sage: "var(--sage)",
-      }
-    },
-  },
   darkMode: "class",
   plugins: [
     nextui({
@@ -32,11 +20,15 @@ const config: Config = {
             foreground: "#F9F4EA",
             focus: "#464C49",
             primary: {
-              foreground: "#5B454C",
+              foreground: "#3b2b31",
               DEFAULT: "#BF8776",
             },
+            success: {
+              foreground: "#3b2b31",
+              DEFAULT: "#acba91",
+            },
             danger: {
-              foreground: "#5B454C",
+              foreground: "#3b2b31",
               DEFAULT: "#DC5B6F",
             },
           },

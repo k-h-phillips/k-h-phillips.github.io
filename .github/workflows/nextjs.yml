@@ -24,6 +24,10 @@ concurrency:
   group: "pages"
   cancel-in-progress: false
 
+env:
+  NEXT_PUBLIC_EMAIL_JS_PUBLIC_KEY: ${{ vars.NEXT_PUBLIC_EMAIL_JS_PUBLIC_KEY }}
+  NEXT_PUBLIC_EMAIL_JS_SERVICE_ID: ${{ vars.NEXT_PUBLIC_EMAIL_JS_SERVICE_ID }}
+
 jobs:
   # Build job
   build:

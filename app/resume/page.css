@@ -1,0 +1,68 @@
+/* Major section headers. */
+.section-header {
+    font-weight: bold;
+    color: var(--sand);
+    width: 100%;
+    background-color: var(--plum);
+    border-radius: 4px;
+    padding: 2rem 1rem;
+    margin: 3rem auto 2rem auto;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+.section-header:after {
+    content: "";
+    background-image: url(../../public/images/flower-wall.jpg);
+    opacity: 0.15;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    box-shadow: 0 0 1rem var(--black-cherry) inset;
+    border-radius: 10px;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+/* Project headers. */
+.project-header {
+    font-weight: bold;
+    margin-top: 1rem;
+}
+
+/* Job activities lists. */
+.job-description-list {
+    list-style: circle outside;
+    padding-left: 1rem;
+}
+
+/* Enlarge the skill tags on hover. */
+.skill-tag:hover {
+    transform: scale(1.2);
+}
+
+.skill-tag {
+    transition: all 0.5s;
+}
+
+/* Make the resume link tags slightly larger. */
+.resume {
+    transform: scale(1.2);
+}
+
+/* At larger screen widths, make adjustments. */
+@media (min-width: 640px) {
+    .job-description-list {
+        padding-left: 2rem;
+    }
+
+    .job-description-list li {
+        font-size: 1.2rem;
+    }
+
+    .section-header {
+        margin: 4rem auto 2rem auto;
+    }
+}

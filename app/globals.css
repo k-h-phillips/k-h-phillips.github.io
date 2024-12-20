@@ -3,13 +3,16 @@
 @tailwind utilities;
 
 :root {
+  /* Theme colors. */
   --linen: #F9F4EA;
   --plum: #5B454C;
+  --black-cherry: #291e22;
   --mauve: #81555A;
   --peach: #BF8776;
-  --dusty-blue: #6EA0BD;
-  --sage: #919982;
+  --dusty-blue: #7eb7d9;
+  --sage: #acba91;
   --gray: #38494f;
+  --sand: #c2bdb4;
 }
 
 body {
@@ -17,12 +20,30 @@ body {
   background: var(--plum);
 }
 
-h1 {
-  font-family: var(--font-big-shoulders-inline-text)
+header {
+  max-width: 1250px !important;
 }
 
-p, button {
-  font-family: var(--font-big-shoulders-text)
+h1 {
+  font-family: var(--font-big-shoulders-inline-text);
+}
+
+p,
+button,
+h2,
+h3,
+h4,
+li,
+span {
+  font-family: var(--font-big-shoulders-text);
+}
+
+p,
+li,
+span,
+h3,
+h4 {
+  letter-spacing: 0.05rem;
 }
 
 @layer utilities {
@@ -51,4 +72,67 @@ p, button {
 
 .intro:after {
   background: var(--mauve);
+}
+
+.wavy-line {
+  position: relative;
+  width: 12rem;
+  height: 25px;
+  overflow: hidden;
+}
+
+.wavy-line::before {
+  content: 'aaaaaaaaaaaaaaaaaaaaaaaa';
+  position: absolute;
+  top: -32px;
+  left: 0;
+  font-size: 2em;
+  color: transparent;
+  text-decoration-style: wavy;
+  text-decoration-color: var(--peach);
+  text-decoration-line: underline;
+  animation: animate 10s linear infinite;
+}
+
+.fade-up {
+  animation: fadeUp 1.5s;
+}
+
+.fade {
+  animation: fade 1.5s;
+}
+
+@keyframes animate {
+  0% {
+    transform: translateX(0px)
+  }
+
+  100% {
+    transform: translateX(-212px)
+  }
+}
+
+@keyframes fadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(50%);
+  }
+
+  40% {
+    transform: translateY(-10%)
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0
+  }
+
+  100% {
+    opacity: 1
+  }
 }
