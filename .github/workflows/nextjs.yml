@@ -94,3 +94,6 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+        env:
+          NEXT_PUBLIC_EMAIL_JS_PUBLIC_KEY: ${{ secrets.NEXT_PUBLIC_EMAIL_JS_PUBLIC_KEY }}
+          NEXT_PUBLIC_EMAIL_JS_SERVICE_ID: ${{ secrets.NEXT_PUBLIC_EMAIL_JS_SERVICE_ID }}
