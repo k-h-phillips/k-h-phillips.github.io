@@ -36,6 +36,8 @@ export default function Contact() {
         setStatus('success');
       },
       () => {
+        console.log("process.env.NEXT_PUBLIC_EMAIL_JS_SERVICE_ID: " + serviceId)
+        console.log("process.env.NEXT_PUBLIC_EMAIL_JS_PUBLIC_KEY: " + process.env.NEXT_PUBLIC_EMAIL_JS_PUBLIC_KEY)
         setStatus('failure')
       },
     );
