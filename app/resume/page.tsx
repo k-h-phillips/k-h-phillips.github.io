@@ -121,13 +121,15 @@ export default function Resume() {
       title: 'k-h-phillips.github.io',
       description: 'This website! A web development project built with React, Next.js, NextUI, and Tailwind CSS, and deployed with GitHub pages (because it&apos;s super simple and free). I created this site to offer more information about me, display my résumé in a way that represents my style, showcase some web design skills, and to serve as a platform to display future side projects.',
       src: khphillipsThumbnail.src,
-      alt: 'k-h-phillips.github.io website screenshot'
+      alt: 'k-h-phillips.github.io website screenshot',
+      link: 'https://k-h-phillips.github.io'
     },
     {
       title: 'Codecademy Full-Stack Engineer Professional Certication',
       description: 'To earn this certification I completed 51 courses and dedicated more than 150 hours of my personal time to hone full-stack software engineering skills and learn new technologies. The coursework involved the completion of mini projects which helped me get the hands on experience I needed without having the time to complete full scale projects.',
       src: codecademyThumbnail.src,
-      alt: 'codecademy full stack engineer professional certification website screenshot'
+      alt: 'codecademy full stack engineer professional certification website screenshot',
+      link: 'https://www.codecademy.com/learn/paths/full-stack-engineer-career-path'
     }
   ]
 
@@ -170,7 +172,7 @@ export default function Resume() {
         {
           workExperiences.map((experience, index) => {
             return (
-              <section key={index} className="md:flex md:gap-4">
+              <section key={index} className="md:flex md:gap-4 mb-[3rem]">
                 <div className="basis-1/4 grow-0 shrink-0">
                   <div className="md:sticky md:top-[5rem] flex md:flex-col flex-row-reverse gap-2 mt-4 flex-wrap md:text-center md:justify-start justify-end">
                     <Link href={experience.link} target="_blank" className="sm:self-center ml-[1rem]">
@@ -215,12 +217,14 @@ export default function Resume() {
             sideProjects.map((project, index) => {
               return (
                 <div key={index}>
-                  <Image alt={project.alt}
-                    className="shadow-2xl rounded-lg"
-                    src={project.src}
-                    width={400}
-                    height={200}
-                  />
+                  <Link href={project.link} target="_blank">
+                    <Image alt={project.alt}
+                      className="shadow-2xl rounded-lg"
+                      src={project.src}
+                      width={400}
+                      height={200}
+                    />
+                  </Link>
                   <h4 className="project-header text-l sm: text-2xl text-primary">{project.title}</h4>
                   <p>{project.description}</p>
                 </div>
