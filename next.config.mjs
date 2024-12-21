@@ -2,11 +2,7 @@
 const nextConfig = {
     output: "export",  // <=== enables static exports
     reactStrictMode: true,
-    distDir: 'dist',
-    env: {
-        NEXT_PUBLIC_EMAIL_JS_PUBLIC_KEY: process.env.NEXT_PUBLIC_EMAIL_JS_PUBLIC_KEY,
-        NEXT_PUBLIC_EMAIL_JS_SERVICE_ID: process.env.NEXT_PUBLIC_EMAIL_JS_SERVICE_ID,
-    }
+    distDir: 'dist'
 };
 
 export default nextConfig;
