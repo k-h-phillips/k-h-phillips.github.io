@@ -25,9 +25,8 @@ export default function Contact() {
 
     setStatus('sending');
 
-    const serviceId = process.env.NEXT_PUBLIC_EMAIL_JS_SERVICE_ID || ''
     emailjs.send(
-      serviceId,
+      process.env.NEXT_PUBLIC_EMAIL_JS_SERVICE_ID || '',
       'contact_form',
       { user_name: name, user_email: email, message: message, uuid: uuidv4() },
       { publicKey: process.env.NEXT_PUBLIC_EMAIL_JS_PUBLIC_KEY, }
@@ -36,7 +35,7 @@ export default function Contact() {
         setStatus('success');
       },
       () => {
-        console.log("process.env.NEXT_PUBLIC_EMAIL_JS_SERVICE_ID: " + serviceId)
+        console.log("process.env.NEXT_PUBLIC_EMAIL_JS_SERVICE_ID: " + process.env.NEXT_PUBLIC_EMAIL_JS_SERVICE_ID)
         console.log("process.env.NEXT_PUBLIC_EMAIL_JS_PUBLIC_KEY: " + process.env.NEXT_PUBLIC_EMAIL_JS_PUBLIC_KEY)
         setStatus('failure')
       },
