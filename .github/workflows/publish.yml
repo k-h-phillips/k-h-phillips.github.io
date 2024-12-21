@@ -36,7 +36,7 @@ jobs:
           NEXT_PUBLIC_EMAIL_JS_PUBLIC_KEY: ${{ vars.NEXT_PUBLIC_EMAIL_JS_PUBLIC_KEY }}
           NEXT_PUBLIC_EMAIL_JS_SERVICE_ID: ${{ vars.NEXT_PUBLIC_EMAIL_JS_PUBLIC_KEY }}
 
-      - name: Upload artifact 📡
+      - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
           path: ./out
