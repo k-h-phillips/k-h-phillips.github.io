@@ -50,6 +50,9 @@ jobs:
           fi
       - name: Setup Node
         uses: actions/setup-node@v4
+        env:
+          NEXT_PUBLIC_EMAIL_JS_PUBLIC_KEY: ${{ vars.NEXT_PUBLIC_EMAIL_JS_PUBLIC_KEY }}
+          NEXT_PUBLIC_EMAIL_JS_SERVICE_ID: ${{ vars.NEXT_PUBLIC_EMAIL_JS_SERVICE_ID }}
         with:
           node-version: "20"
           cache: ${{ steps.detect-package-manager.outputs.manager }}
