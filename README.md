@@ -1,22 +1,8 @@
-## Getting Started
+# Kirsten Phillips
+I'm a full-stack software engineer working to grow my skill set, with an eagerness to build high-quality software products to support critical missions.
 
-First, run the development server:
+This is my personal website, which I intend to use to display my résumé as well as supplemental information about myself, my experiences, and side projects that I'm working on.
 
-```bash
-npm run dev
-```
+This site was built with Next.js, React, NextUI, and Tailwind CSS and it is deployed using GitHub pages to https://k-h-phillips.github.io. 
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+This is my first ever deployed website that I created in my spare time off work, and I'm very proud of it! That being said, I'll continue to make tweaks to it as I receive feedback and as my style preferences evolve. 

@@ -1,0 +1,83 @@
+/* Block quote. */
+.quote:after {
+    background: var(--black-cherry);
+}
+
+/* Paragraphs on the about page. */
+.about-page p {
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: normal;
+}
+
+/* Emphasized words in the paragraphs*/
+.about-page p strong {
+    color: var(--sage);
+    font-family: var(--font-big-shoulders-text);
+    font-size: 1.2em;
+    letter-spacing: 0.05rem;
+}
+
+/* The list of hobbies. */
+.hobbies-list {
+    list-style: circle outside;
+    padding-left: 2rem;
+}
+
+/* Make the images fit inside of same-sized containers. */
+.grid-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* At larger screen widths, make adjustments. */
+@media (min-width: 640px) {
+    /* Sections on the about page. */
+    .about-page section {
+        padding: 3rem 4rem 4rem 4rem !important;
+    }
+    .about-page section:nth-child(even) {
+        border-radius: 0 20% 0 20% !important;
+    }
+    .about-page section:last-child {
+        border-radius: 0 20% 0 0 !important;
+    }
+}
+
+/* Sections on the about page. */
+.about-page section {
+    padding: 3rem 1.5rem 4rem 1.5rem;
+}
+.about-page section:first-child {
+    padding-top: 2rem !important;
+}
+.about-page section:nth-child(even) {
+    background: var(--mauve);
+    border-radius: 0 10% 0 10%;
+}
+.about-page section:last-child {
+    border-radius: 0 10% 0 0;
+}
+
+/* Headings in the lighter colored sections. */
+.about-page section:nth-child(even) h1 {
+    color: var(--black-cherry);
+    font-weight: 800;
+}
+
+/* Paragraph and photo sections that slide in from either side of the screen. */
+.about-page section div {
+    transition: all ease-out 1s;
+}
+.about-page section div:first-child {
+    transform: translateX(-100%);
+    opacity: 0;
+}
+.about-page section div:last-child {
+    transform: translateX(100%);
+    opacity: 0;
+}
+.slide-in {
+    transform: translateX(0) !important;
+    opacity: 1 !important;
+}

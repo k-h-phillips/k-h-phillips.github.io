@@ -50,7 +50,7 @@ export default function RootLayout({
     <html lang="en" className="dark">
       <body className={`${bigShouldersInlineText.variable} ${bigShouldersText.variable} antialiased`} >
         <Providers>
-          <div className="flex flex-col min-h-screen items-center">
+          <div className="grid min-h-screen">
             <NavBar />
             {children}
           </div>

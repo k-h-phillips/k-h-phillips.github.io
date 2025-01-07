@@ -15,13 +15,15 @@ export default function ContactForm(props: {
 }) {
     return (
         <>
-            <h1 className="font-bold text-4xl sm:text-6xl text-center">send me a message</h1>
-            <p className="text-m sm:text-xl text-[var(--peach)] w-11/12 text-center faded-bg message-purpose">have a question, constructive criticism, or want to say hi?<br />i&apos;ll get back to you asap.</p>
+            <h1 className="font-bold sm:text-6xl text-4xl text-center">send me a message</h1>
+            <p className="sm:text-xl text-md text-[var(--peach)] w-5/6 text-center faded-bg message-purpose">
+                have a question, constructive criticism, or want to say hi?<br />i&apos;ll get back to you asap.
+            </p>
             <form className="flex flex-col gap-3 w-full sm:w-[40vw] pt-5 pr-5 pl-5 pb-2" onSubmit={props.onSubmit}>
                 <div className="flex w-full flex-wrap md:flex-nowrap gap-4">
                     <Input
                         type="text"
-                        label="Name"
+                        label="name"
                         name="user_name"
                         value={props.name}
                         onValueChange={props.onNameChange}
@@ -30,10 +32,10 @@ export default function ContactForm(props: {
                         color="primary"
                         isRequired={true}
                         validationBehavior="native"
-                        errorMessage="Please enter a name" />
+                        errorMessage="please enter a name" />
                     <Input
                         type="email"
-                        label="Email"
+                        label="email"
                         name="user_email"
                         value={props.email}
                         onValueChange={props.onEmailChange}
@@ -42,10 +44,10 @@ export default function ContactForm(props: {
                         color="primary"
                         isRequired={true}
                         validationBehavior="native"
-                        errorMessage="Please enter a valid email" />
+                        errorMessage="please enter a valid email" />
                 </div>
                 <Textarea
-                    label="Message"
+                    label="message"
                     color="primary"
                     minRows={6}
                     onValueChange={props.onMessageChange}
@@ -56,9 +58,9 @@ export default function ContactForm(props: {
                     size="md"
                 />
                 <Button
-                    className='w-3/5 self-center text-xl font-bold'
+                    className='w-3/5 self-center sm:text-xl text-sm font-bold'
                     color="primary" type="submit"
-                    endContent={<Io5Icons.IoSend color="var(--black-cherry)" size={18} />} >
+                    endContent={<Io5Icons.IoSend color="var(--black-cherry)" size={18} />}>
                     send
                 </Button>
             </form>

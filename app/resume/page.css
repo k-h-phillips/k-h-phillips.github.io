@@ -32,6 +32,12 @@
     margin-top: 1rem;
 }
 
+/* Project descriptions. */
+.project-description {
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: normal;
+}
+
 /* Job activities lists. */
 .job-description-list {
     list-style: circle outside;
@@ -39,30 +45,15 @@
 }
 
 /* Enlarge the skill tags on hover. */
-.skill-tag:hover {
-    transform: scale(1.2);
-}
-
 .skill-tag {
     transition: all 0.5s;
+}
+
+.skill-tag:hover {
+    transform: scale(1.2);
 }
 
 /* Make the resume link tags slightly larger. */
 .resume {
     transform: scale(1.2);
-}
-
-/* At larger screen widths, make adjustments. */
-@media (min-width: 640px) {
-    .job-description-list {
-        padding-left: 2rem;
-    }
-
-    .job-description-list li {
-        font-size: 1.2rem;
-    }
-
-    .section-header {
-        margin: 4rem auto 2rem auto;
-    }
 }

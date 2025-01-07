@@ -15,15 +15,25 @@
   --sand: #c2bdb4;
 }
 
+/* Body. */
 body {
   color: var(--linen);
   background: var(--plum);
 }
 
+/* Header. */
 header {
-  max-width: 1250px !important;
+  max-width: unset !important;
 }
 
+/* At larger screen widths, make adjustments. */
+@media (min-width: 640px) {
+  header {
+    padding: 0 4rem !important;
+  }
+}
+
+/* Fonts. */
 h1 {
   font-family: var(--font-big-shoulders-inline-text);
 }
@@ -33,25 +43,14 @@ button,
 h2,
 h3,
 h4,
-li,
 span {
   font-family: var(--font-big-shoulders-text);
-}
-
-p,
-li,
-span,
-h3,
-h4 {
   letter-spacing: 0.05rem;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
-}
-
+/* Theme where there is an slightly see-through rectangle behind a block of text. 
+  The :after pseudo-element just needs a background color defined.
+*/
 .faded-bg {
   position: relative;
   border-radius: 0.375rem;
@@ -70,10 +69,12 @@ h4 {
   z-index: -1;
 }
 
+/* The intro message after pseudo-element. */
 .intro:after {
   background: var(--mauve);
 }
 
+/* Loading animation. */
 .wavy-line {
   position: relative;
   width: 12rem;
@@ -94,14 +95,6 @@ h4 {
   animation: animate 10s linear infinite;
 }
 
-.fade-up {
-  animation: fadeUp 1.5s;
-}
-
-.fade {
-  animation: fade 1.5s;
-}
-
 @keyframes animate {
   0% {
     transform: translateX(0px)
@@ -112,19 +105,24 @@ h4 {
   }
 }
 
-@keyframes fadeUp {
+/* Slide up content revealing animation. */
+.slide-up {
+  animation: fade 2s, slideUp 1.5s;
+}
+
+@keyframes slideUp {
   0% {
-    opacity: 0;
     transform: translateY(50%);
   }
 
   40% {
     transform: translateY(-10%)
   }
+}
 
-  100% {
-    opacity: 1;
-  }
+/* Fade in content revealing animation. */
+.fade {
+  animation: fade 1.5s;
 }
 
 @keyframes fade {

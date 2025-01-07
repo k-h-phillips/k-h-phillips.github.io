@@ -41,8 +41,8 @@ export default function Contact() {
   };
 
   return (
-    <div className="grid items-center justify-items-center flex-auto p-8 fade-up mt-[4rem]">
-      <main className="flex flex-col gap-4 items-center">
+    <div className="grid items-center justify-items-center flex-auto p-8 mt-[4rem] fade">
+      <main className="grid gap-4 justify-items-center">
         {
           // If the form is in progress, display the form.
           status == 'in progress' ?
@@ -57,16 +57,16 @@ export default function Contact() {
               status == 'success' ?
                 <>
                   <Io5Icons.IoSend color="var(--black-cherry)" size={56} className="-rotate-12" />
-                  <h1 className="font-bold text-4xl sm:text-6xl text-center">message sent!</h1>
-                  <p className="text-m sm:text-xl text-[var(--sage)] w-11/12 text-center faded-bg message">i&apos;ll be in touch soon.</p>
+                  <h1 className="font-bold sm:text-6xl text-4xl text-center">message sent!</h1>
+                  <p className="sm:text-xl text-m text-[var(--sage)] w-11/12 text-center faded-bg message-purpose">i&apos;ll be in touch soon.</p>
                 </>
                 :
 
                 // If the email failed to send, indicate failure.
                 <>
                   <Io5Icons.IoClose color="var(--black-cherry)" size={56} />
-                  <h1 className="font-bold text-4xl sm:text-6xl text-center">message failed to send?</h1>
-                  <p className="text-m sm:text-xl text-danger w-11/12 text-center faded-bg message-purpose">this is probably my fault... try again later?</p>
+                  <h1 className="font-bold sm:text-6xl text-4xl text-center">message failed to send?</h1>
+                  <p className="sm:text-xl text-m text-danger w-11/12 text-center faded-bg message-purpose">this is probably my fault... try again later?</p>
                 </>
         }
       </main>
@@ -74,9 +74,15 @@ export default function Contact() {
         // Give some other options for contacting.
         status == 'in progress' &&
         <div>
-          <p className="tracking-wide text-md sm:text-lg text-center">OR</p>
-          <p className="tracking-wide text-md sm:text-lg text-center">email me directly: <Link href="mailto:kirstenphillips210@gmail.com" target="blank" className="text-[var(--dusty-blue)] text-md sm:text-lg" isExternal showAnchorIcon> kirstenphillips210@gmail.com</Link></p>
-          <p className="tracking-wide text-md sm:text-lg text-center">give me call: <span className="text-[var(--dusty-blue)] text-md sm:text-lg">(434) 917-0499</span></p>
+          <p className="tracking-wide sm:text-lg text-sm text-center">OR</p>
+          <p className="tracking-wide sm:text-lg text-sm text-center">email me directly:&nbsp;
+            <Link href="mailto:kirstenphillips210@gmail.com" target="blank" className="text-[var(--dusty-blue)] sm:text-lg text-sm" isExternal showAnchorIcon>
+              kirstenphillips210@gmail.com
+            </Link>
+          </p>
+          <p className="tracking-wide sm:text-lg text-sm text-center">
+            give me call: <span className="text-[var(--dusty-blue)] sm:text-lg text-sm">(434) 917-0499</span>
+          </p>
         </div>
       }
     </div>
