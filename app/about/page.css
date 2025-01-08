@@ -17,8 +17,8 @@
     letter-spacing: 0.05rem;
 }
 
-/* The list of hobbies. */
-.hobbies-list {
+/* The list of childhood activities and hobbies. */
+.about-page ul {
     list-style: circle outside;
     padding-left: 2rem;
 }
@@ -37,10 +37,10 @@
         padding: 3rem 4rem 4rem 4rem !important;
     }
     .about-page section:nth-child(even) {
-        border-radius: 0 20% 0 20% !important;
+        border-radius: 0 200px 0 200px !important;
     }
     .about-page section:last-child {
-        border-radius: 0 20% 0 0 !important;
+        border-radius: 0 200px 0 0 !important;
     }
 }
 
@@ -53,10 +53,10 @@
 }
 .about-page section:nth-child(even) {
     background: var(--mauve);
-    border-radius: 0 10% 0 10%;
+    border-radius: 0 100px 0 100px;
 }
 .about-page section:last-child {
-    border-radius: 0 10% 0 0;
+    border-radius: 0 100px 0 0;
 }
 
 /* Headings in the lighter colored sections. */

@@ -43,6 +43,15 @@ export default function About() {
   useEffect(() => refEffect(marriageRef));
   useEffect(() => refEffect(freeTimeRef));
 
+  const childhoodActivities: string[] = [
+    "working hard at school",
+    "memorizing scripture at church",
+    "learning piano",
+    "competing in softball and volleyball",
+    "playing the flute in school band",
+    "working in customer & food service"
+  ]
+
   const hobbies: string[] = [
     "working out",
     "running (for fun, yes, I know)",
@@ -66,15 +75,20 @@ export default function About() {
         <div className="self-center md:basis-2/5">
           <h1 className="text-5xl sm:text-7xl text-primary font-bold mb-[1.5rem]" >growing up</h1>
           <p className="sm:text-sm text-xs">
-            I was extremely blessed to be raised in a family of 8 on beautiful Lake Gaston in southern Virginia.
-            <br /><br />
-            
-            Everyday life consisted of working hard in school, memorizing scripture at church, learning piano,
-            competing fiercly in softball and volleyball, playing the flute in the middle and high schools bands, and
-            working in childcare, as a hostess, and as a waitress.<br /><br />
-            These experiences combined taught me the importance of <strong>discipline</strong>, <strong>teamwork</strong>, 
-            <strong> community</strong>, <strong>gratitude</strong>, and <strong>commitment</strong>.<br /><br />
+            I was extremely <strong>blessed</strong> to be raised in a family of 8 on beautiful Lake Gaston in southern Virginia.<br /><br />
 
+            My childhood experiences taught me the importance of <strong>discipline</strong>, <strong>teamwork</strong>, 
+            <strong> community</strong>, <strong>gratitude</strong>, <strong>intentionality</strong>, and <strong>commitment</strong>:
+          </p>
+          <ul>
+            {
+              childhoodActivities.map(activity => {
+                return <li className="sm:text-sm text-xs" key={activity}>{activity}</li>
+              })
+            }
+          </ul>
+          <br />
+          <p className="sm:text-sm text-xs">
             My mom always told me in moments of uncertainty: <br />
             <strong className="block leading-10 my-4 text-center faded-bg quote">&quot;All you can do is the best you can do.&quot;</strong>
             That gave me the freedom and confidence to push myself to new limits in every aspect of life, and to keep working to make my &quot;best&quot; better and better.<br />
@@ -95,17 +109,14 @@ export default function About() {
           <Image alt="UVa graduation" className="rounded-md shadow-xl grid-img" width={250} height={250} src={uvaGrad.src}></Image>
         </div>
         <div className="self-center md:basis-3/5">
-          <h1 className="text-5xl sm:text-7xl text-primary font-bold mb-[1.5rem]">getting degrees</h1>
+          <h1 className="text-5xl sm:text-7xl text-primary font-bold mb-[1.5rem]">three degrees</h1>
           <p className="sm:text-sm text-xs">
-            A natural inclination towards <strong>math</strong> and <strong>science</strong> in early years of school led to attending
-            the Governor&apos;s school of Southside Virginia during my junior and senior years of high school, allowing me to earn
-            my associate&apos;s degree before my high school diploma.<br /><br />
-            My software development journey began early in high school when I enrolled in community college classes on top of my normal
-            coursework, and gained valuable exposure to&nbsp; <strong>Python</strong>&nbsp; and <strong>Java</strong>.<br /><br />
-            In 2017, I graduated from the Mecklenburg County Public Schools system as <strong>co-valedictorian</strong>, and started my college
-            career in August at the <strong>University of Virginia School of Engineering</strong>.<br /><br />
-            At UVa, I decided early on to major in <strong>Computer Science</strong> and minor in Engineering Business because of my love for solving problems
-            with code. I also held a part-time position as a Calculus 3 teaching assistant for 2 years, and led a small group for InterVarsity Christian Fellowship.<br /><br />
+            A natural inclination towards <strong>math</strong> and <strong>science</strong> in high school led to earning my associate&apos;s degree in the STEM program
+            at the Governor&apos;s school of Southside Virginia, where I gained first exposure to <strong>C++</strong>, <strong>Java</strong>, and <strong>Python</strong>.<br /><br />
+
+            After graduating from HS as co-valedictorian in 2017, I decided to major in <strong>Computer Science</strong> and minor in Engineering Business at <strong>UVa</strong> because of my love for solving problems
+            with code. During college I held a part-time position as a Calculus 3 teaching assistant for 2 years, and led a small group for InterVarsity Christian Fellowship.<br /><br />
+            
             Despite the challenges of the year of 2020, I accepted a full time software development position in Ashburn, VA and graduated
             &nbsp;<strong>summa cum laude</strong> in May 2021.
           </p>
@@ -114,18 +125,21 @@ export default function About() {
 
       { /* Moving to NOVA and marriage */}
       <section className="flex flex-col md:flex-row lg:gap-[4rem] gap-[1rem]" ref={marriageRef}>
-        <div className="self-center md:basis-3/5">
-          <h1 className="text-5xl sm:text-7xl text-primary font-bold mb-[1.5rem]">marriage</h1>
+        <div className="self-center md:basis-1/2">
+          <h1 className="text-5xl sm:text-7xl text-primary font-bold mb-[1.5rem]">becoming a family</h1>
           <p className="sm:text-sm text-xs">
             In the summer of 2021, my high school sweetheart and I moved out of our home town and into <strong>Reston, VA</strong> so that I could
             begin my career at G3 Technologies in Ashburn, VA.<br /><br />
-            Though we experienced some culture shock at first, moving to northern VA opened up a world of opportunities that
-            we had never even dreamed of and taught us many many lessons.<br /><br />
+
+            Though we experienced some culture shock at first, moving to northern VA opened up a world of <strong>opportunities</strong> that
+            we had never dreamed of and taught us many lessons.<br /><br />
+
             I started my career as a software developer and my husband John became an orthotics and prosthetics technician.<br /><br />
+
             We were <strong>married</strong> on April 30th, 2022 and now live in Marshall, VA with our two cats, Bugs and Rags.
           </p>
         </div>
-        <div className="grid grid-cols-2 grid-rows-2 gap-3 items-center justify-items-center md:basis-2/5">
+        <div className="grid grid-cols-2 grid-rows-2 gap-3 items-center justify-items-center md:basis-1/2">
           <Image alt="Wedding day" className="rounded-md shadow-xl col-span-2 grid-img" src={marriage.src} height={250} width={250}></Image>
           <Image alt="John and I" className="rounded-md shadow-xl grid-img" src={engagementPic.src} height={250} width={250}></Image>
           <Image alt="My cats, Bugs and Rags" className="rounded-md shadow-xl grid-img" src={bugsAndRags.src} height={250} width={250}></Image>
@@ -145,7 +159,7 @@ export default function About() {
           <p className="sm:text-sm text-xs">
             I love <strong>hobbies!</strong> I&apos;m always picking up new ones, but here are some that I love doing right now:
           </p>
-          <ul className="hobbies-list sm:text-sm text-xs">
+          <ul className="sm:text-sm text-xs">
             {
               hobbies.map(hobby => {
                 return <li className="sm:text-sm text-xs" key={hobby}>{hobby}</li>
@@ -154,9 +168,9 @@ export default function About() {
           </ul>
           <br />
           <p className="sm:text-sm text-xs">
-            Of course, another one of my hobbies is building on my software engineering skill set outside of the workplace
-            by working on side projects and certifications. I do make an intentional effort to fill my free time with activities
-            that <strong>don&apos;t involve a screen</strong> to avoid burnout.
+            Of course, another one of my hobbies is building software like this website. 
+            But, I think it is extremely important to be <strong>intentional</strong>&nbsp; 
+            about <strong>reducing screen time</strong> and <strong>connecting with people</strong> to avoid burnout.
           </p>
         </div>
       </section>
