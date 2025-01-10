@@ -1,17 +1,18 @@
 'use client'
 
 import { Avatar, Chip, Link } from '@nextui-org/react';
+import { useRef } from 'react';
 import Image from 'next/image';
 import * as Fa6Icons from "react-icons/fa6";
 import { LuExternalLink } from "react-icons/lu";
-import codecademyThumbnail from '../../public/images/full-stack-engineer.thumbnail.png';
 import g3Logo from '../../public/images/G3TechnologiesLogo.png';
 import itAvailLogo from '../../public/images/ITAvailabilityLogo.png';
+import uvaLogo from '../../public/images/UvaLogo.png';
+import codecademyThumbnail from '../../public/images/full-stack-engineer.thumbnail.png';
 import khphillipsThumbnail from '../../public/images/k-h-phillips.github.io.thumbnail.png';
 import profilePic from '../../public/images/profile-pic.jpg';
-import uvaLogo from '../../public/images/UvaLogo.png';
+import { RxDoubleArrowDown } from 'react-icons/rx';
 import './page.css';
-
 export default function Resume() {
   // Skills chips for each project. Displayed in horizontal lines, wrapping when necessary.
   const itAvailProjectOneSkills = ['python', 'playwright', 'JSON', 'mongoDB', 'REDIS', 'bash scripting', 'powershell', 'azure', 'gitlab', 'linux', 'windows']
@@ -133,12 +134,18 @@ export default function Resume() {
     }
   ]
 
+  const firstSectionRef = useRef<HTMLHeadingElement>(null);
+  const scrollToFirstSection = () => {
+    const { current } = firstSectionRef;
+    current?.scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"})
+  }
+
   return (
-    <div className="pt-[8rem] sm:px-[4rem] px-[1.5rem] fade">
+    <div className="sm:px-[4rem] px-[1.5rem] fade">
 
       { /* Header with profile photo, name, title, and résumé links. */}
-      <div className="flex sm:flex-row flex-col gap-4 sm:justify-between justify-center items-center">
-        <div className="flex flex-row gap-4 items-center">
+      <div className="flex flex-col gap-10 pt-16 justify-center items-center min-h-screen">
+        <div className="flex flex-row gap-4 items-center p-4 business-card">
           <Avatar isBordered src={profilePic.src} color="primary" className="justify-self-start sm:w-[8rem] w-[6rem] sm:h-[8rem] h-[6rem]" />
           <div className="font-bold">
             <h1 className="sm:text-6xl text-3xl">kirsten phillips</h1>
@@ -164,10 +171,11 @@ export default function Resume() {
             })
           }
         </div>
+        <RxDoubleArrowDown color="var(--peach)" className="absolute bottom-6 cursor-pointer down-arrow" size={50} onClick={scrollToFirstSection}></RxDoubleArrowDown>
       </div>
 
       { /* Work experience */}
-      <h2 className="sm:text-5xl text-3xl section-header" id="work-experience">work experience</h2>
+      <h2 className="sm:text-5xl text-3xl section-header" id="work-experience" ref={firstSectionRef}>work experience</h2>
       <div>
         {
           workExperiences.map((experience, index) => {

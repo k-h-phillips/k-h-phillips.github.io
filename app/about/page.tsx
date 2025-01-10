@@ -14,6 +14,8 @@ import lakeHappy from '../../public/images/lakeHappy.jpg';
 import lakeTubing from '../../public/images/lakeTubing.jpg';
 import marriage from '../../public/images/marriage.jpg';
 import uvaGrad from '../../public/images/uvaGrad.jpg';
+import { RxDoubleArrowDown } from "react-icons/rx";
+
 import './page.css';
 
 export default function About() {
@@ -67,8 +69,21 @@ export default function About() {
     "hanging out with my nieces and nephews",
   ]
 
+  const scrollToFirstSection = () => {
+    const { current } = childhoodRef;
+    current?.scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"})
+  }
+
   return (
     <div className="flex flex-col justify-between gap-5 w-full max-h-[full] fade mt-[4rem] about-page">
+      { /* intro */ }
+      <section className="grow flex flex-col items-center justify-center min-h-screen">
+        <h1 className="font-bold sm:text-9xl text-7xl text-center">my story</h1>
+        <h4 className="sm:text-4xl text-2xl text-[var(--sage)] text-center my-6 faded-bg intro">
+          in case you&apos;re curious
+        </h4>
+        <RxDoubleArrowDown color="var(--peach)" className="absolute bottom-6 cursor-pointer down-arrow" size={50} onClick={scrollToFirstSection}></RxDoubleArrowDown>
+      </section>
 
       { /* childhood */}
       <section className="flex flex-col md:flex-row lg:gap-[4rem] gap-[1rem]" ref={childhoodRef}>

@@ -71,7 +71,7 @@ span {
 
 /* The intro message after pseudo-element. */
 .intro:after {
-  background: var(--mauve);
+  background: var(--black-cherry);
 }
 
 /* Loading animation. */
@@ -81,7 +81,6 @@ span {
   height: 25px;
   overflow: hidden;
 }
-
 .wavy-line::before {
   content: 'aaaaaaaaaaaaaaaaaaaaaaaa';
   position: absolute;
@@ -133,4 +132,14 @@ span {
   100% {
     opacity: 1
   }
+}
+
+/* Animation for the down arrows that bounce. */
+.down-arrow {
+  animation: 2s infinite ease-in-out bounce;
+  box-shadow: 0px 0px 15px -3px;
+  border-radius: 0.5rem;
+}
+@keyframes bounce {
+  50% { transform: translateY(10px); }
 }

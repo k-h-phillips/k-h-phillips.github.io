@@ -10,6 +10,7 @@
     text-align: center;
     position: relative;
     z-index: 1;
+    scroll-margin-top: 4rem;
 }
 
 .section-header:after {
@@ -56,4 +57,22 @@
 /* Make the resume link tags slightly larger. */
 .resume {
     transform: scale(1.2);
+}
+
+/* Intro card with name, job title, and resume links. */
+.business-card {
+    position: relative;
+    border-radius: 0.5rem;
+    z-index: 1;
+}
+.business-card:after {
+    content: "";
+    opacity: 0.4;
+    height: 120%;
+    width: 110%;
+    left: -5%;
+    position: absolute;
+    border-radius: 0.5rem;
+    z-index: -1;
+    background: var(--black-cherry)
 }

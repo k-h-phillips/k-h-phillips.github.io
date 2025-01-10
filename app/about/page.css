@@ -34,29 +34,28 @@
 @media (min-width: 640px) {
     /* Sections on the about page. */
     .about-page section {
-        padding: 3rem 4rem 4rem 4rem !important;
+        padding: 4rem !important;
     }
     .about-page section:nth-child(even) {
-        border-radius: 0 200px 0 200px !important;
+        border-radius: 0 150px 0 150px !important;
     }
     .about-page section:last-child {
-        border-radius: 0 200px 0 0 !important;
+        border-radius: 0 150px 0 0 !important;
     }
 }
 
 /* Sections on the about page. */
 .about-page section {
-    padding: 3rem 1.5rem 4rem 1.5rem;
-}
-.about-page section:first-child {
-    padding-top: 2rem !important;
+    padding: 4rem 1.5rem;
+    min-height: 90vh;
+    scroll-margin-top: 4rem;
 }
 .about-page section:nth-child(even) {
     background: var(--mauve);
-    border-radius: 0 100px 0 100px;
+    border-radius: 0 75px 0 75px;
 }
 .about-page section:last-child {
-    border-radius: 0 100px 0 0;
+    border-radius: 0 75px 0 0;
 }
 
 /* Headings in the lighter colored sections. */
