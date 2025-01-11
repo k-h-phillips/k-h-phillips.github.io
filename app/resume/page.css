@@ -63,3 +63,9 @@
 .business-card:after {
     background: var(--black-cherry)
 }
+
+/* Company logos. */
+.company-logo:after {
+    background: var(--peach);
+    opacity: 0.2;
+}

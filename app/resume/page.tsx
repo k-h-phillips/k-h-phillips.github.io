@@ -183,7 +183,7 @@ export default function Resume() {
               <section key={index} className="md:flex md:gap-4 first:mb-[3rem]">
                 <div className="basis-1/4 grow-0 shrink-0">
                   <div className="md:sticky md:top-[5rem] flex md:flex-col flex-row-reverse gap-2 mt-4 flex-wrap md:text-center md:justify-start justify-end">
-                    <Link href={experience.link} target="_blank" className="sm:self-center ml-[1rem]">
+                    <Link href={experience.link} target="_blank" className="sm:self-center ml-[1rem] faded-bg company-logo sm:my-4">
                       <Image alt={experience.alt} src={experience.logo} width={experience.width} height={experience.height} />
                     </Link>
                     <div className="grid sm:gap-2">
