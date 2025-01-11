@@ -75,7 +75,7 @@ export default function About() {
   }
 
   return (
-    <div className="flex flex-col justify-between gap-28 w-full max-h-[full] fade mt-[4rem] about-page">
+    <div className="flex flex-col justify-between gap-28 w-full max-h-[full] fade about-page">
       { /* intro */ }
       <section className="grow flex flex-col items-center justify-center h-screen">
         <h1 className="font-bold sm:text-9xl text-7xl text-center">my story</h1>
