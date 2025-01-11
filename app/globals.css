@@ -53,19 +53,18 @@ span {
 */
 .faded-bg {
   position: relative;
-  border-radius: 0.375rem;
+  border-radius: 0.5rem;
   z-index: 1;
 }
-
 .faded-bg:after {
   content: "";
   opacity: 0.4;
   height: 120%;
-  width: 80%;
+  width: 110%;
   position: absolute;
+  left: -5%;
   top: -10%;
-  left: 10%;
-  border-radius: 0.375rem;
+  border-radius: 0.5rem;
   z-index: -1;
 }
 

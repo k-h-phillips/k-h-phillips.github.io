@@ -1,4 +1,4 @@
 /* Background for the message purpose blurb. */
 .message-purpose:after {
-    background: var(--mauve);
+    background: var(--black-cherry);
 }

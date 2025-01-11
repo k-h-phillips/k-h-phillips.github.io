@@ -75,19 +75,24 @@ export default function About() {
   }
 
   return (
-    <div className="flex flex-col justify-between gap-5 w-full max-h-[full] fade mt-[4rem] about-page">
+    <div className="flex flex-col justify-between gap-28 w-full max-h-[full] fade mt-[4rem] about-page">
       { /* intro */ }
-      <section className="grow flex flex-col items-center justify-center min-h-screen">
+      <section className="grow flex flex-col items-center justify-center h-screen">
         <h1 className="font-bold sm:text-9xl text-7xl text-center">my story</h1>
-        <h4 className="sm:text-4xl text-2xl text-[var(--sage)] text-center my-6 faded-bg intro">
+        <h4 className="sm:text-2xl text-l text-[var(--sage)] text-center my-6 faded-bg intro">
           in case you&apos;re curious
         </h4>
-        <RxDoubleArrowDown color="var(--peach)" className="absolute bottom-6 cursor-pointer down-arrow" size={50} onClick={scrollToFirstSection}></RxDoubleArrowDown>
+        <RxDoubleArrowDown color="var(--peach)" className="absolute bottom-[6rem] cursor-pointer down-arrow" size={50} onClick={scrollToFirstSection}></RxDoubleArrowDown>
       </section>
 
       { /* childhood */}
       <section className="flex flex-col md:flex-row lg:gap-[4rem] gap-[1rem]" ref={childhoodRef}>
-        <div className="self-center md:basis-2/5">
+        <div className="top-curve">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z" className="shape-fill"></path>
+            </svg>
+        </div>
+        <div className="self-center md:basis-2/5 left-segment">
           <h1 className="text-5xl sm:text-7xl text-primary font-bold mb-[1.5rem]" >growing up</h1>
           <p className="sm:text-sm text-xs">
             I was extremely <strong>blessed</strong> to be raised in a family of 8 on beautiful Lake Gaston in southern Virginia.<br /><br />
@@ -103,27 +108,32 @@ export default function About() {
             }
           </ul>
           <br />
-          <p className="sm:text-sm text-xs">
+          <p className="sm:text-sm text-xs flex flex-col">
             My mom always told me in moments of uncertainty: <br />
-            <strong className="block leading-10 my-4 text-center faded-bg quote">&quot;All you can do is the best you can do.&quot;</strong>
+            <strong className="block leading-10 my-4 text-center faded-bg quote self-center w-max">&quot;All you can do is the best you can do.&quot;</strong>
             That gave me the freedom and confidence to push myself to new limits in every aspect of life, and to keep working to make my &quot;best&quot; better and better.<br />
           </p>
         </div>
-        <div className="grid grid-cols-2 grid-rows-2 gap-3 items-center justify-items-center md:basis-3/5">
-          <Image alt="Tubing on Lake Gaston" className="rounded-md shadow-xl grid-img" src={lakeTubing.src} width={250} height={250} />
-          <Image alt="Playing softball" className="rounded-md shadow-xl grid-img" src={crushers.src} width={250} height={250} />
-          <Image alt="Lake time" className="rounded-md shadow-xl grid-img" src={lakeHappy.src} width={250} height={250} />
-          <Image alt="Family" className="rounded-md shadow-xl grid-img" src={familyLater.src} width={250} height={250} />
+        <div className="grid grid-cols-2 grid-rows-2 gap-3 items-center justify-items-center md:basis-3/5 right-segment">
+          <Image alt="Tubing on Lake Gaston" className="rounded-md shadow-xl" src={lakeTubing.src} width={250} height={250} />
+          <Image alt="Playing softball" className="rounded-md shadow-xl" src={crushers.src} width={250} height={250} />
+          <Image alt="Lake time" className="rounded-md shadow-xl" src={lakeHappy.src} width={250} height={250} />
+          <Image alt="Family" className="rounded-md shadow-xl" src={familyLater.src} width={250} height={250} />
+        </div>
+        <div className="bottom-curve">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" className="shape-fill"></path>
+            </svg>
         </div>
       </section>
 
       { /* Schooling */}
       <section className="flex flex-col-reverse md:flex-row lg:gap-[4rem] gap-[1rem]" ref={educationRef}>
-        <div className="grid grid-cols-2 grid-rows-1 gap-3 items-center justify-items-center md:basis-2/5">
-          <Image alt="High school graduation" className="rounded-md shadow-xl grid-img" width={250} height={250} src={highSchoolGrad.src}></Image>
-          <Image alt="UVa graduation" className="rounded-md shadow-xl grid-img" width={250} height={250} src={uvaGrad.src}></Image>
+        <div className="grid grid-cols-2 grid-rows-1 gap-3 items-center justify-items-center md:basis-2/5 left-segment">
+          <Image alt="High school graduation" className="rounded-md shadow-xl" width={250} height={250} src={highSchoolGrad.src}></Image>
+          <Image alt="UVa graduation" className="rounded-md shadow-xl" width={250} height={250} src={uvaGrad.src}></Image>
         </div>
-        <div className="self-center md:basis-3/5">
+        <div className="self-center md:basis-3/5 right-segment">
           <h1 className="text-5xl sm:text-7xl text-primary font-bold mb-[1.5rem]">three degrees</h1>
           <p className="sm:text-sm text-xs">
             A natural inclination towards <strong>math</strong> and <strong>science</strong> in high school led to earning my associate&apos;s degree in the STEM program
@@ -140,7 +150,12 @@ export default function About() {
 
       { /* Moving to NOVA and marriage */}
       <section className="flex flex-col md:flex-row lg:gap-[4rem] gap-[1rem]" ref={marriageRef}>
-        <div className="self-center md:basis-1/2">
+        <div className="top-curve">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z" className="shape-fill"></path>
+            </svg>
+        </div>
+        <div className="self-center md:basis-1/2 left-segment">
           <h1 className="text-5xl sm:text-7xl text-primary font-bold mb-[1.5rem]">becoming a family</h1>
           <p className="sm:text-sm text-xs">
             In the summer of 2021, my high school sweetheart and I moved out of our home town and into <strong>Reston, VA</strong> so that I could
@@ -154,22 +169,27 @@ export default function About() {
             We were <strong>married</strong> on April 30th, 2022 and now live in Marshall, VA with our two cats, Bugs and Rags.
           </p>
         </div>
-        <div className="grid grid-cols-2 grid-rows-2 gap-3 items-center justify-items-center md:basis-1/2">
-          <Image alt="Wedding day" className="rounded-md shadow-xl col-span-2 grid-img" src={marriage.src} height={250} width={250}></Image>
-          <Image alt="John and I" className="rounded-md shadow-xl grid-img" src={engagementPic.src} height={250} width={250}></Image>
-          <Image alt="My cats, Bugs and Rags" className="rounded-md shadow-xl grid-img" src={bugsAndRags.src} height={250} width={250}></Image>
+        <div className="grid grid-cols-2 grid-rows-2 gap-3 items-center justify-items-center md:basis-1/2 right-segment">
+          <Image alt="Wedding day" className="rounded-md shadow-xl col-span-2" src={marriage.src} height={250} width={250}></Image>
+          <Image alt="John and I" className="rounded-md shadow-xl" src={engagementPic.src} height={250} width={250}></Image>
+          <Image alt="My cats, Bugs and Rags" className="rounded-md shadow-xl" src={bugsAndRags.src} height={250} width={250}></Image>
+        </div>
+        <div className="bottom-curve">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" className="shape-fill"></path>
+            </svg>
         </div>
       </section>
 
       { /* Hobbies */}
       <section className="flex flex-col-reverse md:flex-row lg:gap-[4rem] gap-[1rem]" ref={freeTimeRef}>
-        <div className="grid grid-cols-2 grid-rows-2 gap-3 items-center justify-items-center md:basis-2/5">
-          <Image alt="My cat in a blanket I crocheted" className="rounded-md shadow-xl grid-img" src={crochetBugs.src} height={250} width={250}></Image>
-          <Image alt="Hiking Humpback rock" className="rounded-md shadow-xl grid-img" src={hiking.src} height={250} width={250}></Image>
-          <Image alt="Me in a sweater I crocheted" className="rounded-md shadow-xl grid-img" src={crochetSweater.src} height={250} width={250}></Image>
-          <Image alt="A cute cross-stitching pattern" className="rounded-md shadow-xl grid-img" src={crossStitch.src} height={250} width={250}></Image>
+        <div className="grid grid-cols-2 grid-rows-2 gap-3 items-center justify-items-center md:basis-2/5 left-segment">
+          <Image alt="My cat in a blanket I crocheted" className="rounded-md shadow-xl" src={crochetBugs.src} height={250} width={250}></Image>
+          <Image alt="Hiking Humpback rock" className="rounded-md shadow-xl" src={hiking.src} height={250} width={250}></Image>
+          <Image alt="Me in a sweater I crocheted" className="rounded-md shadow-xl" src={crochetSweater.src} height={250} width={250}></Image>
+          <Image alt="A cute cross-stitching pattern" className="rounded-md shadow-xl" src={crossStitch.src} height={250} width={250}></Image>
         </div>
-        <div className="self-center md:basis-3/5">
+        <div className="self-center md:basis-3/5 right-segment">
           <h1 className="text-5xl sm:text-7xl text-primary font-bold mb-[1.5rem]" >in my free time</h1>
           <p className="sm:text-sm text-xs">
             I love <strong>hobbies!</strong> I&apos;m always picking up new ones, but here are some that I love doing right now:

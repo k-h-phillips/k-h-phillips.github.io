@@ -145,7 +145,7 @@ export default function Resume() {
 
       { /* Header with profile photo, name, title, and résumé links. */}
       <div className="flex flex-col gap-10 pt-16 justify-center items-center min-h-screen">
-        <div className="flex flex-row gap-4 items-center p-4 business-card">
+        <div className="flex flex-row gap-4 items-center p-4 business-card faded-bg">
           <Avatar isBordered src={profilePic.src} color="primary" className="justify-self-start sm:w-[8rem] w-[6rem] sm:h-[8rem] h-[6rem]" />
           <div className="font-bold">
             <h1 className="sm:text-6xl text-3xl">kirsten phillips</h1>

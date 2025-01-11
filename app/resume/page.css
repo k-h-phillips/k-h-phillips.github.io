@@ -6,7 +6,7 @@
     background-color: var(--plum);
     border-radius: 4px;
     padding: 2rem 1rem;
-    margin: 3rem auto 2rem auto;
+    margin: 8rem auto 2rem auto;
     text-align: center;
     position: relative;
     z-index: 1;
@@ -60,19 +60,6 @@
 }
 
 /* Intro card with name, job title, and resume links. */
-.business-card {
-    position: relative;
-    border-radius: 0.5rem;
-    z-index: 1;
-}
 .business-card:after {
-    content: "";
-    opacity: 0.4;
-    height: 120%;
-    width: 110%;
-    left: -5%;
-    position: absolute;
-    border-radius: 0.5rem;
-    z-index: -1;
     background: var(--black-cherry)
 }

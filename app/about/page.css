@@ -24,38 +24,30 @@
 }
 
 /* Make the images fit inside of same-sized containers. */
-.grid-img {
+.about-page img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+
+/* Sections on the about page. */
+.about-page section {
+    padding: 0rem 1.5rem 4rem 1.5rem;
+    min-height: 90vh;
+    scroll-margin-top: 135px;
+    position: relative;
+}
+.about-page section:nth-child(even) {
+    background: var(--mauve);
 }
 
 /* At larger screen widths, make adjustments. */
 @media (min-width: 640px) {
     /* Sections on the about page. */
     .about-page section {
-        padding: 4rem !important;
+        padding: 0rem 4rem 4rem 4rem;
+        scroll-margin-top: 228px;
     }
-    .about-page section:nth-child(even) {
-        border-radius: 0 150px 0 150px !important;
-    }
-    .about-page section:last-child {
-        border-radius: 0 150px 0 0 !important;
-    }
-}
-
-/* Sections on the about page. */
-.about-page section {
-    padding: 4rem 1.5rem;
-    min-height: 90vh;
-    scroll-margin-top: 4rem;
-}
-.about-page section:nth-child(even) {
-    background: var(--mauve);
-    border-radius: 0 75px 0 75px;
-}
-.about-page section:last-child {
-    border-radius: 0 75px 0 0;
 }
 
 /* Headings in the lighter colored sections. */
@@ -65,18 +57,72 @@
 }
 
 /* Paragraph and photo sections that slide in from either side of the screen. */
-.about-page section div {
+div.left-segment, div.right-segment {
     transition: all ease-out 1s;
 }
-.about-page section div:first-child {
+div.left-segment {
     transform: translateX(-100%);
     opacity: 0;
 }
-.about-page section div:last-child {
+div.right-segment {
     transform: translateX(100%);
     opacity: 0;
 }
 .slide-in {
     transform: translateX(0) !important;
     opacity: 1 !important;
+}
+
+/* Curvy edges on the lighter colored blocks. */
+.top-curve {
+    position: absolute;
+    top: -164px;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(0deg);
+}
+.top-curve svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 164px;
+}
+.top-curve .shape-fill {
+    fill: #81555A;
+}
+.bottom-curve {
+    position: absolute;
+    bottom: -164px;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+.bottom-curve svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 164px;
+}
+.bottom-curve .shape-fill {
+    fill: #81555A;
+}
+/** For mobile devices **/
+@media (max-width: 767px) {
+    .top-curve {
+        top: -70px;
+    }
+    .top-curve svg {
+        width: calc(100% + 1.3px);
+        height: 71px;
+    }
+    .bottom-curve {
+        bottom: -70px;
+    }
+    .bottom-curve svg {
+        width: calc(100% + 1.3px);
+        height: 71px;
+    }
 }

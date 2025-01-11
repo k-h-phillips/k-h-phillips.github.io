@@ -16,7 +16,7 @@ export default function ContactForm(props: {
     return (
         <>
             <h1 className="font-bold sm:text-6xl text-4xl text-center">send me a message</h1>
-            <p className="sm:text-xl text-md text-[var(--peach)] w-5/6 text-center faded-bg message-purpose">
+            <p className="sm:text-xl text-md text-[var(--peach)] text-center faded-bg message-purpose">
                 have a question, constructive criticism, or want to say hi?<br />i&apos;ll get back to you asap.
             </p>
             <form className="flex flex-col gap-3 w-full sm:w-[40vw] pt-5 pr-5 pl-5 pb-2" onSubmit={props.onSubmit}>
