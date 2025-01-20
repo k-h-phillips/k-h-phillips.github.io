@@ -59,7 +59,7 @@ export default function Resume() {
       timeframe: 'september 2022 - ongoing',
       projects: [
         {
-          title: 'python automated data collection and processing algorithms',
+          title: 'python automated data collection and processing applications',
           skills: makeSkillChipsContainer(itAvailProjectOneSkills),
           jobActivities: [
             'implemented Python applications on Azure infrastructure to accomplish automated data collection via APIs and other collection strategies',
