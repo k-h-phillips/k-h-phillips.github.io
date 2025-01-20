@@ -141,7 +141,7 @@ export default function Resume() {
   }
 
   return (
-    <div className="sm:px-[4rem] px-[1.5rem] fade">
+    <div className="sm:px-[4rem] px-[1.5rem] fade max-w-[1500px] justify-self-center">
 
       { /* Header with profile photo, name, title, and résumé links. */}
       <div className="flex flex-col gap-10 pt-16 justify-center items-center min-h-screen">
