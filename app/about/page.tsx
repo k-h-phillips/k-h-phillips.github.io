@@ -94,7 +94,7 @@ export default function About() {
         </div>
         <div className="self-center md:basis-2/5 left-segment">
           <h1 className="text-5xl sm:text-7xl text-primary font-bold mb-[1.5rem]" >growing up</h1>
-          <p className="sm:text-sm text-xs">
+          <p className="sm:text-lg text-sm">
             I was extremely <strong>blessed</strong> to be raised in a family of 8 on beautiful Lake Gaston in southern Virginia.<br /><br />
 
             My childhood experiences taught me the importance of <strong>discipline</strong>, <strong>teamwork</strong>, 
@@ -108,7 +108,7 @@ export default function About() {
             }
           </ul>
           <br />
-          <p className="sm:text-sm text-xs flex flex-col">
+          <p className="sm:text-lg text-sm flex flex-col">
             My mom always told me in moments of uncertainty: <br />
             <strong className="block leading-10 my-4 text-center faded-bg quote self-center w-max">&quot;All you can do is the best you can do.&quot;</strong>
             That gave me the freedom and confidence to push myself to new limits in every aspect of life, and to keep working to make my &quot;best&quot; better and better.<br />
@@ -135,7 +135,7 @@ export default function About() {
         </div>
         <div className="self-center md:basis-3/5 right-segment">
           <h1 className="text-5xl sm:text-7xl text-primary font-bold mb-[1.5rem]">three degrees</h1>
-          <p className="sm:text-sm text-xs">
+          <p className="sm:text-lg text-sm">
             A natural inclination towards <strong>math</strong> and <strong>science</strong> in high school led to earning my associate&apos;s degree in the STEM program
             at the Governor&apos;s school of Southside Virginia, where I gained first exposure to <strong>C++</strong>, <strong>Java</strong>, and <strong>Python</strong>.<br /><br />
 
@@ -157,7 +157,7 @@ export default function About() {
         </div>
         <div className="self-center md:basis-1/2 left-segment">
           <h1 className="text-5xl sm:text-7xl text-primary font-bold mb-[1.5rem]">becoming a family</h1>
-          <p className="sm:text-sm text-xs">
+          <p className="sm:text-lg text-sm">
             In the summer of 2021, my high school sweetheart and I moved out of our home town and into <strong>Reston, VA</strong> so that I could
             begin my career at G3 Technologies in Ashburn, VA.<br /><br />
 
@@ -191,18 +191,18 @@ export default function About() {
         </div>
         <div className="self-center md:basis-3/5 right-segment">
           <h1 className="text-5xl sm:text-7xl text-primary font-bold mb-[1.5rem]" >in my free time</h1>
-          <p className="sm:text-sm text-xs">
+          <p className="sm:text-lg text-sm">
             I love <strong>hobbies!</strong> I&apos;m always picking up new ones, but here are some that I love doing right now:
           </p>
-          <ul className="sm:text-sm text-xs">
+          <ul className="sm:text-lg text-sm">
             {
               hobbies.map(hobby => {
-                return <li className="sm:text-sm text-xs" key={hobby}>{hobby}</li>
+                return <li className="sm:text-lg text-sm" key={hobby}>{hobby}</li>
               })
             }
           </ul>
           <br />
-          <p className="sm:text-sm text-xs">
+          <p className="sm:text-lg text-sm">
             Of course, another one of my hobbies is building software like this website. 
             But, I think it is extremely important to be <strong>intentional</strong>&nbsp; 
             about <strong>reducing screen time</strong> and <strong>connecting with people</strong> to avoid burnout.
